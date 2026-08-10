@@ -1,0 +1,63 @@
+# Potion Shop
+
+A web-based mobile menu app for a potion shop, built as part of the Scrimba Full Stack Path, focusing on DOM manipulation, dynamic content rendering, and CSS layout and styling.
+
+---
+
+## Project Overview
+
+A [Figma design](https://www.figma.com/design/Hdgwo69Dym9vVsxbuPbl0h/Mobile-Restaurant-Menu?node-id=0-1&t=r8jwmyHIEVtTc5cL-1) was provided as a layout reference. All HTML, CSS, and JavaScript were written independently from scratch, adapting the original restaurant menu concept into a potion shop, focusing on connecting a JavaScript data array to the DOM and keeping structure, style, and logic cleanly separated.
+
+---
+
+## Features
+
+- Menu items (potions) rendered dynamically from a JavaScript data array
+- Each item displays icon, name, ingredients, and price
+- Add-to-cart functionality via a "+" button on each item
+- Cart tracks selected items and quantity, rendered dynamically at the bottom of the screen
+
+---
+
+## Project Structure
+
+```
+potion-shop/
+├── assets/
+│   ├── icons/
+│   │   ├── bottle-health.png
+│   │   ├── bottle-mana.png
+│   │   └── bottle-stamina.png
+│   ├── add-button.png
+│   └── banner.png
+├── data.js
+├── index.css
+├── index.html
+├── index.js
+├── package.json
+└── README.md
+```
+
+---
+
+## Technologies Used
+
+- HTML5
+- CSS3
+  - Flexbox
+- JavaScript (vanilla)
+
+---
+
+## Planned Improvements
+
+- Decrease quantity / remove item from cart (minus and trash buttons)
+- Order total calculation
+- Checkout flow (payment modal and order confirmation screens)
+- UI and spacing refinements
+
+---
+
+## Credits
+
+Potion icons created by [Magnific - Flaticon](https://www.flaticon.com/free-icons/potion "potion icons")
