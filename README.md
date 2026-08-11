@@ -16,6 +16,7 @@ A [Figma design](https://www.figma.com/design/Hdgwo69Dym9vVsxbuPbl0h/Mobile-Rest
 - Each item displays icon, name, ingredients, and price
 - Add-to-cart functionality via a "+" button on each item
 - Cart tracks selected items and quantity, rendered dynamically at the bottom of the screen
+- Decrease quantity or remove items from the cart via minus and trash buttons
 
 ---
 
@@ -28,13 +29,15 @@ potion-shop/
 │   │   ├── bottle-health.png
 │   │   ├── bottle-mana.png
 │   │   └── bottle-stamina.png
-│   ├── add-button.png
+│   ├── buttons/
+│   │   ├── add-button.png
+│   │   ├── minus-button.png
+│   │   └── trash-button.png
 │   └── banner.png
 ├── data.js
 ├── index.css
 ├── index.html
 ├── index.js
-├── package.json
 └── README.md
 ```
 
@@ -51,7 +54,6 @@ potion-shop/
 
 ## Planned Improvements
 
-- Decrease quantity / remove item from cart (minus and trash buttons)
 - Order total calculation
 - Checkout flow (payment modal and order confirmation screens)
 - UI and spacing refinements

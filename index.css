@@ -5,6 +5,14 @@ body {
     background-color: #e5e5e5;
 } 
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
 h1 {
     padding: 0;
     margin: 0;
@@ -41,7 +49,7 @@ p {
 }
 
 .menu-item img, 
-.quantity {
+.item-quantity {
   width: 60px; 
   height: 60px;
   flex-shrink: 0;
@@ -65,4 +73,15 @@ p {
     display: flex;
     flex-direction: column;
     flex: 1;
+}
+
+.quantity-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.quantity-container img {
+    width: 24px;
+    height: 24px;
 }
