@@ -2,27 +2,36 @@ import {menuArray} from './data.js'
 
 const itemsMenu = document.getElementById('items-menu')
 const cart = document.getElementById('cart')
+const coinIcon = '<img src="./assets/icons/coin-icon.png" class="coin-icon">'
 let cartArray = []
 
 
 const renderedMenu = menuArray.map(({name, ingredients, price, icon, id}) => {
     return `<div class="menu-item">
-                <img src="${icon}">
+                <img class="potion-icon" src="${icon}">
                 <div class="item-info">
                     <h2>${name}</h2>
                     <p class="ingredients">${ingredients.join(', ')}</p>
-                    <p class="price">$${price}</p>
+                    <p class="price">${coinIcon}${price}</p>
                 </div>
                 <img class="add-button" src="./assets/buttons/add-button.png" data-id="${id}">
             </div>`
 }).join('')
+
+
+const calculateTotal = (array) => {
+    return array.reduce((accumulator, currentItem) => {
+        return accumulator + (currentItem.quantity * currentItem.price)
+    }, 0)
+}
+
 
 const renderCart = () => {
     const renderedCart = cartArray.map(({name, price, id, quantity}) => {
     return `<div class="cartItem">
                 <div class="item-info">
                     <h2>${name}</h2>
-                    <p class="price">$${price}</p>
+                    <p class="price">${coinIcon}${price}</p>
                 </div>
                 <div class="quantity-container">
                     <img class="trash-button" src="./assets/buttons/trash-button.png" data-id="${id}">
@@ -32,7 +41,12 @@ const renderCart = () => {
             </div>`
     }).join('')
 
+    const totalPrice = calculateTotal(cartArray)
     cart.innerHTML = `<h1>Cart</h1>${renderedCart}`
+
+    if (cartArray.length > 0) {
+        cart.innerHTML += `<div class="price-container"><h2>Total</h2><p>${coinIcon}${totalPrice}</p></div>`
+    }
 }
 
 

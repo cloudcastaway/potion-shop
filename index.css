@@ -30,6 +30,7 @@ p {
     background-color: white;
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
 }
 
 .menu-item,
@@ -48,7 +49,8 @@ p {
     flex: 1;
 }
 
-.menu-item img, 
+.potion-icon,
+.add-button, 
 .item-quantity {
   width: 60px; 
   height: 60px;
@@ -84,4 +86,20 @@ p {
 .quantity-container img {
     width: 24px;
     height: 24px;
+}
+
+.price-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.price-container p {
+    margin-left: auto;
+}
+
+.coin-icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
 }
