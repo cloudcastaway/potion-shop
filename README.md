@@ -18,6 +18,7 @@ A [Figma design](https://www.figma.com/design/Hdgwo69Dym9vVsxbuPbl0h/Mobile-Rest
 - Cart tracks selected items and quantity, rendered dynamically at the bottom of the screen
 - Decrease quantity or remove items from the cart via minus and trash buttons
 - Cart displays running total price
+- Checkout modal with card details form, opened via a "Complete order" button and dismissed by clicking outside or the close button
 
 ---
 
@@ -56,7 +57,7 @@ potion-shop/
 
 ## Planned Improvements
 
-- Checkout flow (payment modal and order confirmation screens)
+- Order confirmation screen after payment
 - UI and spacing refinements
 
 ---

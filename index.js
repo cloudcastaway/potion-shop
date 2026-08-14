@@ -2,7 +2,9 @@ import {menuArray} from './data.js'
 
 const itemsMenu = document.getElementById('items-menu')
 const cart = document.getElementById('cart')
+const modalOverlay = document.querySelector('.modal-overlay')
 const coinIcon = '<img src="./assets/icons/coin-icon.png" class="coin-icon">'
+const closeModalBtn = document.querySelector('.close-modal-btn')
 let cartArray = []
 
 
@@ -45,7 +47,11 @@ const renderCart = () => {
     cart.innerHTML = `<h1>Cart</h1>${renderedCart}`
 
     if (cartArray.length > 0) {
-        cart.innerHTML += `<div class="price-container"><h2>Total</h2><p>${coinIcon}${totalPrice}</p></div>`
+        cart.innerHTML += `<div class="price-container">
+                                <h2>Total</h2>
+                                <p>${coinIcon}${totalPrice}</p>
+                            </div>
+                            <button class="complete-order-btn">Complete order</button>`
     }
 }
 
@@ -92,15 +98,26 @@ cart.addEventListener('click', (event) => {
 
         renderCart()
     }
-})
 
-
-cart.addEventListener('click', (event) => {
-    if (event.target.classList.contains('trash-button')) {
-        const clickedId = Number(event.target.dataset.id)
-
+    if (event.target.classList.contains('complete-order-btn')) {
+        modalOverlay.classList.add('visible')
+        cart.querySelector('.complete-order-btn').disabled = true
     }
 })
+
+
+modalOverlay.addEventListener('click', (event) => {
+    if (event.target == modalOverlay) {
+        modalOverlay.classList.remove('visible')
+        cart.querySelector('.complete-order-btn').disabled = false
+    }
+})
+
+closeModalBtn.addEventListener('click', (event) => {
+    modalOverlay.classList.remove('visible')
+    cart.querySelector('.complete-order-btn').disabled = false
+})
+
 
 
 itemsMenu.innerHTML = renderedMenu
