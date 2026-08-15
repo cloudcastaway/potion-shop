@@ -113,11 +113,11 @@ modalOverlay.addEventListener('click', (event) => {
     }
 })
 
+
 closeModalBtn.addEventListener('click', (event) => {
     modalOverlay.classList.remove('visible')
     cart.querySelector('.complete-order-btn').disabled = false
 })
-
 
 
 itemsMenu.innerHTML = renderedMenu

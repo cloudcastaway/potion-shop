@@ -162,3 +162,18 @@ input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
+.add-button,
+.minus-button,
+.trash-button,
+button {
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.add-button:hover,
+.minus-button:hover,
+.trash-button:hover,
+button:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 6px rgba(139, 111, 217, 0.8));
+}
