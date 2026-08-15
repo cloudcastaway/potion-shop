@@ -44,14 +44,16 @@ const renderCart = () => {
     }).join('')
 
     const totalPrice = calculateTotal(cartArray)
-    cart.innerHTML = `<h1>Cart</h1>${renderedCart}`
 
     if (cartArray.length > 0) {
+        cart.innerHTML = `<h1 class="cart-title">Your order</h1>${renderedCart}`
         cart.innerHTML += `<div class="price-container">
                                 <h2>Total</h2>
                                 <p>${coinIcon}${totalPrice}</p>
                             </div>
                             <button class="complete-order-btn">Complete order</button>`
+    } else {
+        cart.innerHTML = ""
     }
 }
 

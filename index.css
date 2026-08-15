@@ -33,7 +33,7 @@ button,
 .app-container {
     width: 100%;
     max-width: 430px;
-    min-height: 100vh;
+    height: 100vh;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -71,12 +71,14 @@ button,
 }
 
 #cart {
-    margin-top: auto;
+    padding-top: 2rem;
     display: flex;
     flex-direction: column;
-    position: sticky;
-    bottom: 0;
     z-index: 10;
+}
+
+.cart-title {
+    margin: 0 auto;
 }
 
 .content {
@@ -135,6 +137,7 @@ button,
     justify-content: center;
     align-items: center;
     position: absolute;
+    z-index: 20;
     background-color: rgba(46, 42, 58, 0.5);
 }
 
