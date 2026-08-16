@@ -58,6 +58,11 @@ potion-shop/
 ## Planned Improvements
 
 - Order confirmation screen after payment
+- Sparkle effect following the cursor across the page
+- Distinguish the remove button from the decrease button visually
+- Focus states for the card details inputs
+- Input validation for the card details form
+- Persist cart across page reloads
 - UI and spacing refinements
 
 ---
