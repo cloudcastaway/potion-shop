@@ -19,6 +19,7 @@ A [Figma design](https://www.figma.com/design/Hdgwo69Dym9vVsxbuPbl0h/Mobile-Rest
 - Decrease quantity or remove items from the cart via minus and trash buttons
 - Cart displays running total price
 - Checkout modal with card details form, opened via a "Complete order" button and dismissed by clicking outside or the close button
+- Order confirmation message displayed after payment, personalised with the customer's name
 
 ---
 
@@ -57,7 +58,6 @@ potion-shop/
 
 ## Planned Improvements
 
-- Order confirmation screen after payment
 - Sparkle effect following the cursor across the page
 - Distinguish the remove button from the decrease button visually
 - Focus states for the card details inputs

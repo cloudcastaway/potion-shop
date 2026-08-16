@@ -160,6 +160,24 @@ input {
     height: 3rem;
 }
 
+.confirmation-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 200px;
+    margin: 0 auto;
+    background-color: rgba(111, 184, 138, 0.7);
+    padding: 25px 50px;
+    border-radius: 20px;
+    border: solid 4px #E893C4;
+}
+
+.confirmation-message p {
+    margin: 0 auto;
+}
+
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;

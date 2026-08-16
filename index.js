@@ -5,6 +5,8 @@ const cart = document.getElementById('cart')
 const modalOverlay = document.querySelector('.modal-overlay')
 const coinIcon = '<img src="./assets/icons/coin-icon.png" class="coin-icon">'
 const closeModalBtn = document.querySelector('.close-modal-btn')
+const paymentModal = document.querySelector('.payment-modal')
+const customerName = document.getElementById('customer-name')
 let cartArray = []
 
 
@@ -119,6 +121,17 @@ modalOverlay.addEventListener('click', (event) => {
 closeModalBtn.addEventListener('click', (event) => {
     modalOverlay.classList.remove('visible')
     cart.querySelector('.complete-order-btn').disabled = false
+})
+
+paymentModal.addEventListener('submit', (event) => {
+    event.preventDefault()
+    cart.innerHTML = `<section class="confirmation-message">
+                        <p>Thanks, <span class="name"></span>.</p>
+                        <p>Your order is being bottled.</p>
+                      </section>`
+    cart.querySelector('.name').textContent = customerName.value
+    modalOverlay.classList.remove('visible')
+    cartArray = []
 })
 
 
