@@ -132,6 +132,7 @@ paymentModal.addEventListener('submit', (event) => {
     cart.querySelector('.name').textContent = customerName.value
     modalOverlay.classList.remove('visible')
     cartArray = []
+    paymentModal.reset()
 })
 
 
