@@ -20,6 +20,7 @@ A [Figma design](https://www.figma.com/design/Hdgwo69Dym9vVsxbuPbl0h/Mobile-Rest
 - Cart displays running total price
 - Checkout modal with card details form, opened via a "Complete order" button and dismissed by clicking outside or the close button
 - Order confirmation message displayed after payment, personalised with the customer's name
+- Sparkle effect trailing the cursor across the page
 
 ---
 
@@ -52,13 +53,17 @@ potion-shop/
 - HTML5
 - CSS3
   - Flexbox
+  - Animations and keyframes
+  - clip-path
 - JavaScript (vanilla)
 
 ---
 
 ## Planned Improvements
 
-- Sparkle effect following the cursor across the page
+- Decorated background for the viewport area (night sky, stars)
+- Styling refinements to buttons
+- Replace default fonts
 - Distinguish the remove button from the decrease button visually
 - Focus states for the card details inputs
 - Input validation for the card details form

@@ -198,3 +198,19 @@ button:hover {
   transform: scale(1.1);
   filter: drop-shadow(0 0 6px rgba(139, 111, 217, 0.8));
 }
+
+.trail-sparkle {
+    opacity: 0.5;
+    position: fixed;
+    height: 10px;
+    width: 10px;
+    animation: fall 4s forwards;
+    clip-path: polygon(50% 0%, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0% 50%, 39% 39%);
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+}
