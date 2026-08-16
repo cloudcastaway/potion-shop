@@ -136,22 +136,4 @@ paymentModal.addEventListener('submit', (event) => {
 })
 
 
-document.addEventListener('mousemove', (event) => {
-    const colors = ["#FFFFFF", "#F4C868", "#E893C4", "#CECBF6"]
-    for (let i = 0; i < 2; i++) {
-        const sparkle = document.createElement('div')
-        const offsetX = (Math.random() - 0.5) * 35
-        const offsetY = (Math.random() - 0.5) * 35
-
-        const indexColor = Math.floor(Math.random() * colors.length)
-        sparkle.style.backgroundColor = colors[indexColor]
-
-        sparkle.className = 'trail-sparkle'
-        sparkle.style.left = `${event.clientX + offsetX}px`
-        sparkle.style.top = `${event.clientY + offsetY}px`
-        document.body.appendChild(sparkle)
-        setTimeout(() => sparkle.remove(), 4000)
-    }
-})
-
 itemsMenu.innerHTML = renderedMenu

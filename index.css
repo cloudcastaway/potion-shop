@@ -2,8 +2,8 @@ body {
     margin: 0;
     display: flex;
     justify-content: center;
-    background-color: #e5e5e5;
-} 
+    background: radial-gradient(#2E3A99 0%, #14183D 70%);
+}
 
 .sr-only {
     position: absolute;
@@ -34,7 +34,7 @@ button,
     width: 100%;
     max-width: 430px;
     height: 100vh;
-    background-color: white;
+    background-color: #F0ECF9;
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
@@ -208,9 +208,84 @@ button:hover {
     clip-path: polygon(50% 0%, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0% 50%, 39% 39%);
 }
 
+.sky-element {
+    position: fixed;
+    background-color: #FFF8E7;
+    opacity: 0.6;
+    animation: twinkle ease-in-out infinite;
+    z-index: -10;
+}
+
+.sky-element-smaller {
+    width: 8px;
+    height: 8px;
+}
+
+.sky-element-small {
+    width: 11px;
+    height: 11px;
+}
+
+.sky-element-medium {
+    width: 15px;
+    height: 15px;
+}
+
+.sky-element-large {
+    width: 21px;
+    height: 21px;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.star {
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.moon-image {
+    position: fixed;
+    width: 200px;
+    height: auto;
+    filter: drop-shadow(0 0 12px #c8b6ff);
+    animation: moon-pulse 3s ease-in-out infinite;
+    top: 50px;
+    left: 70px;
+}
+
 @keyframes fall {
     to {
         transform: translateY(100px);
         opacity: 0;
+    }
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 1;
+        filter: drop-shadow(0 0 4px #5FA8D3)
+                drop-shadow(0 0 8px #c8b6ff);
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.2;
+        filter: drop-shadow(0 0 8px #5FA8D3)
+                drop-shadow(0 0 23px #c8b6ff);
+        transform: scale(1.03);
+    }
+}
+
+@keyframes moon-pulse {
+    0%, 100% {
+        filter: drop-shadow(0 0 10px #c8b6ff)
+                drop-shadow(0 0 20px #fff4c2);
+        transform: scale(1);
+    }
+
+    50% {
+        filter: drop-shadow(0 0 20px #c8b6ff)
+                drop-shadow(0 0 35px #fff4c2);
+        transform: scale(1.03);
     }
 }

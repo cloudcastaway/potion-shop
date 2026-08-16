@@ -21,6 +21,7 @@ A [Figma design](https://www.figma.com/design/Hdgwo69Dym9vVsxbuPbl0h/Mobile-Rest
 - Checkout modal with card details form, opened via a "Complete order" button and dismissed by clicking outside or the close button
 - Order confirmation message displayed after payment, personalised with the customer's name
 - Sparkle effect trailing the cursor across the page
+- Animated night sky background with a starfield and glowing moon
 
 ---
 
@@ -38,8 +39,10 @@ potion-shop/
 │   │   ├── add-button.png
 │   │   ├── minus-button.png
 │   │   └── trash-button.png
-│   └── banner.png
+│   ├── banner.png
+│   └── moon-image.png
 ├── data.js
+├── effects.js
 ├── index.css
 ├── index.html
 ├── index.js
@@ -54,14 +57,12 @@ potion-shop/
 - CSS3
   - Flexbox
   - Animations and keyframes
-  - clip-path
 - JavaScript (vanilla)
 
 ---
 
 ## Planned Improvements
 
-- Decorated background for the viewport area (night sky, stars)
 - Styling refinements to buttons
 - Replace default fonts
 - Distinguish the remove button from the decrease button visually
