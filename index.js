@@ -106,6 +106,7 @@ cart.addEventListener('click', (event) => {
     if (event.target.classList.contains('complete-order-btn')) {
         modalOverlay.classList.add('visible')
         cart.querySelector('.complete-order-btn').disabled = true
+        document.querySelector('.app-container').style.overflow = 'hidden'
     }
 })
 
@@ -114,6 +115,7 @@ modalOverlay.addEventListener('click', (event) => {
     if (event.target == modalOverlay) {
         modalOverlay.classList.remove('visible')
         cart.querySelector('.complete-order-btn').disabled = false
+        document.querySelector('.app-container').style.overflow = 'scroll'
     }
 })
 
@@ -121,6 +123,7 @@ modalOverlay.addEventListener('click', (event) => {
 closeModalBtn.addEventListener('click', (event) => {
     modalOverlay.classList.remove('visible')
     cart.querySelector('.complete-order-btn').disabled = false
+    document.querySelector('.app-container').style.overflow = 'scroll'
 })
 
 paymentModal.addEventListener('submit', (event) => {
