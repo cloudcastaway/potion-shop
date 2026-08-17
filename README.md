@@ -40,6 +40,7 @@ potion-shop/
 │   │   ├── minus-button.png
 │   │   └── trash-button.png
 │   ├── banner.png
+│   ├── favicon.png
 │   └── moon-image.png
 ├── data.js
 ├── effects.js
