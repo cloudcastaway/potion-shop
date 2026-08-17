@@ -1,6 +1,6 @@
 # Potion Shop
 
-A web-based mobile menu app for a potion shop, built as part of the Scrimba Full Stack Path, focusing on DOM manipulation, dynamic content rendering, and CSS layout and styling.
+A web-based potion shop menu app laid out as an open spellbook, built as part of the Scrimba Full Stack Path, focusing on DOM manipulation, dynamic content rendering, and CSS layout and styling.
 
 ---
 
@@ -8,14 +8,17 @@ A web-based mobile menu app for a potion shop, built as part of the Scrimba Full
 
 A [Figma design](https://www.figma.com/design/Hdgwo69Dym9vVsxbuPbl0h/Mobile-Restaurant-Menu?node-id=0-1&t=r8jwmyHIEVtTc5cL-1) was provided as a layout reference. All HTML, CSS, and JavaScript were written independently from scratch, adapting the original restaurant menu concept into a potion shop, focusing on connecting a JavaScript data array to the DOM and keeping structure, style, and logic cleanly separated.
 
+The mobile layout was implemented first and worked as specified. It was then deliberately redesigned as an open spellbook spread: a decision made to suit the theme, and one that removed the need for scrolling by placing the menu and the order on facing pages. A single-page version for narrow screens is planned.
+
 ---
 
 ## Features
 
+- Two-page spellbook layout with the menu and the order on facing pages
 - Menu items (potions) rendered dynamically from a JavaScript data array
 - Each item displays icon, name, ingredients, and price
 - Add-to-cart functionality via a "+" button on each item
-- Cart tracks selected items and quantity, rendered dynamically at the bottom of the screen
+- Cart tracks selected items and quantity, rendered dynamically on the right-hand page
 - Decrease quantity or remove items from the cart via minus and trash buttons
 - Cart displays running total price
 - Checkout modal with card details form, opened via a "Complete order" button and dismissed by clicking outside or the close button
@@ -40,6 +43,7 @@ potion-shop/
 │   │   ├── minus-button.png
 │   │   └── trash-button.png
 │   ├── banner.png
+│   ├── book-bg.png
 │   ├── favicon.png
 │   └── moon-image.png
 ├── data.js
@@ -64,16 +68,20 @@ potion-shop/
 
 ## Planned Improvements
 
+- Single-page book layout for narrow screens
 - Styling refinements to buttons
 - Replace default fonts
 - Distinguish the remove button from the decrease button visually
 - Focus states for the card details inputs
 - Input validation for the card details form
 - Persist cart across page reloads
+- Background music with a toggle
 - UI and spacing refinements
 
 ---
 
 ## Credits
 
-Potion icons created by [Magnific - Flaticon](https://www.flaticon.com/free-icons/potion "potion icons")
+Potion icons created by [Magnific - Flaticon](https://www.flaticon.com/free-icons/potion "potion icons").
+
+Banner, moon, book, and favicon artwork generated with ChatGPT. Button and coin icons generated with Claude.

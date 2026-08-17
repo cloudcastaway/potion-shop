@@ -8,7 +8,6 @@
     </head>
     <body>
         <div class="app-container">
-            <img src="./assets/banner.png" alt="Potion Shop" style="width: 100%; height: auto">
             <h1 class="sr-only">Potion Shop</h1>
             <div class="content">
                 <div class="modal-overlay">
@@ -21,10 +20,24 @@
                         <button class="pay-btn">Pay</button>
                     </form>
                 </div>
-                <main>
-                    <div id="items-menu"></div>
-                    <div id="separator"></div>
-                    <div id="cart"></div>
+                <main id="book-pages">
+                    <div id="first-page">
+                        <img src="./assets/banner.png" alt="Potion Shop" style="width: 100%; height: auto">
+                        <div id="items-menu"></div>
+                    </div>
+                    <div id="second-page">
+                        <div id="cart"></div>
+                        <div class="modal-overlay">
+                            <form class="payment-modal">
+                                <button class="close-modal-btn" type="button">x</button>
+                                <h1 class="form-title">Enter card details</h1>
+                                <input id="customer-name" type="text" placeholder="Your name" required>
+                                <input type="number" placeholder="Card number" required>
+                                <input type="number" placeholder="CVV" required>
+                                <button class="pay-btn">Pay</button>
+                            </form>
+                        </div>
+                    </div>
                 </main>
             </div>
         </div>
