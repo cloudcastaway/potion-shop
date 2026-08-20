@@ -7,6 +7,9 @@ const coinIcon = '<img src="./assets/icons/coin-icon.png" class="coin-icon">'
 const closeModalBtn = document.querySelector('.close-modal-btn')
 const paymentModal = document.querySelector('.payment-modal')
 const customerName = document.getElementById('customer-name')
+const openBook = document.querySelector('.open-book')
+const bookCover = document.getElementById('book-cover')
+const bookPages = document.getElementById('book-pages')
 let cartArray = []
 
 
@@ -136,6 +139,11 @@ paymentModal.addEventListener('submit', (event) => {
     modalOverlay.classList.remove('visible')
     cartArray = []
     paymentModal.reset()
+})
+
+openBook.addEventListener('click', (event) => {
+    bookCover.classList.remove('visible')
+    bookPages.classList.add('visible')
 })
 
 

@@ -8,7 +8,7 @@ A web-based potion shop menu app laid out as an open spellbook, built as part of
 
 A [Figma design](https://www.figma.com/design/Hdgwo69Dym9vVsxbuPbl0h/Mobile-Restaurant-Menu?node-id=0-1&t=r8jwmyHIEVtTc5cL-1) was provided as a layout reference. All HTML, CSS, and JavaScript were written independently from scratch, adapting the original restaurant menu concept into a potion shop, focusing on connecting a JavaScript data array to the DOM and keeping structure, style, and logic cleanly separated.
 
-The mobile layout was implemented first and worked as specified. It was then deliberately redesigned as an open spellbook spread: a decision made to suit the theme, and one that removed the need for scrolling by placing the menu and the order on facing pages. A single-page version for narrow screens is planned.
+The mobile layout was implemented first and worked as specified. It was then deliberately redesigned as an open spellbook spread: a decision made to suit the theme, and one that removed the need for scrolling by placing the menu and the order on facing pages. A closed book cover now serves as the landing screen, opening to reveal the spread on click. A single-page version for narrow screens is planned.
 
 ---
 
@@ -25,6 +25,7 @@ The mobile layout was implemented first and worked as specified. It was then del
 - Order confirmation message displayed after payment, personalised with the customer's name
 - Sparkle effect trailing the cursor across the page
 - Animated night sky background with a starfield and glowing moon
+- Closed book cover as the landing screen, opening to the spread on click
 
 ---
 
@@ -44,6 +45,7 @@ potion-shop/
 │   │   └── trash-button.png
 │   ├── banner.png
 │   ├── book-bg.png
+│   ├── book-cover.png
 │   ├── favicon.png
 │   └── moon-image.png
 ├── data.js

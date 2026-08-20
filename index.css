@@ -31,24 +31,73 @@ button,
 }
 
 .app-container {
-    padding: 80px;
+    padding-top: 80px;
     width: 100%;
     height: 100%;
-    display: flex;
     flex-direction: column;
     position: relative;    
 }
 
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#book-cover {
+    display: none;
+}
+
+#book-cover.visible {
+    display: flex;
+    background-image: url('./assets/book-cover.png');
+    width: 834px;
+    height: 1019px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.open-book {
+    width: 100%;
+    height: 86%;
+    position: absolute;
+    z-index: 30;
+}
+
+.open-book:hover {
+    cursor: pointer;
+}
+
+#book-cover:has(.open-book:hover) {
+    transform: scale(1.03);
+    z-index: 30;
+}
+
+.banner {
+    top: 130px;
+    left: 200px;
+    position: absolute;
+    width: 500px;
+    height: auto;
+    mask-image: radial-gradient(ellipse, black 30%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse, black 30%, transparent 100%);
+}
+
 #book-pages {
+    display: none;
+}
+
+#book-pages.visible {
     display: flex;
     flex-direction: row;
     background-image: url('./assets/book-bg.png');
     background-repeat: no-repeat;
     background-size: contain;
+    position: relative;
     width: 1448px;
     height: 1086px;
-    aspect-ratio: 4/5;
-    position: relative;
 }
 
 #first-page {
@@ -103,14 +152,6 @@ button,
 
 .cart-title {
     margin: 0 auto;
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
 }
 
 .quantity-container {
