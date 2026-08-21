@@ -72,7 +72,6 @@ potion-shop/
 
 - Single-page book layout for narrow screens
 - Styling refinements to buttons
-- Replace default fonts
 - Distinguish the remove button from the decrease button visually
 - Focus states for the card details inputs
 - Input validation for the card details form

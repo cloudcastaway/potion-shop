@@ -147,4 +147,4 @@ openBook.addEventListener('click', (event) => {
 })
 
 
-itemsMenu.innerHTML = renderedMenu
+itemsMenu.innerHTML = `<h1 class="items-title">Items</h1>${renderedMenu}`

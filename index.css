@@ -13,14 +13,35 @@ body {
     clip: rect(0, 0, 0, 0);
 }
 
-h1 {
+h1, h2 {
+    font-family: 'Tangerine', cursive;
+    color: #3D2E7A;
+}
+
+h1, p {
     padding: 0;
     margin: 0;
 }
 
-p {
-    padding: 0;
-    margin: 0;
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 30px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+p, button {
+    font-family: 'Lora', serif;
+    font-size: 14px;
+    color: #6785A8;
+    letter-spacing: 0.02em;
+}
+
+button {
+    letter-spacing: 0.05em
 }
 
 button,
@@ -114,6 +135,11 @@ button,
     left: 780px;
 }
 
+.ingredients {
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
 .menu-item,
 .cartItem {
     display: flex;
@@ -121,6 +147,7 @@ button,
     gap: 1rem;
     border-bottom: 1px solid #e0e0e0;
     padding: 1rem 0;
+    border-bottom: 1px solid #C9A876;
 }
 
 .item-info {
@@ -141,15 +168,13 @@ button,
 #items-menu,
 #cart {
     margin: 1rem;
-}
-
-#cart {
     padding-top: 2rem;
     display: flex;
     flex-direction: column;
     z-index: 10;
 }
 
+.items-title,
 .cart-title {
     margin: 0 auto;
 }
