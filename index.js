@@ -11,7 +11,8 @@ const openBook = document.querySelector('.open-book')
 const bookCover = document.getElementById('book-cover')
 const bookPages = document.getElementById('book-pages')
 const messageContainer = document.querySelector('.message-container')
-let cartArray = []
+const savedCart = localStorage.getItem('cartArray')
+let cartArray = savedCart ? JSON.parse(savedCart) : {}
 
 
 const renderedMenu = menuArray.map(({name, ingredients, price, icon, id}) => {
@@ -31,6 +32,11 @@ const calculateTotal = (array) => {
     return array.reduce((accumulator, currentItem) => {
         return accumulator + (currentItem.quantity * currentItem.price)
     }, 0)
+}
+
+
+const saveCart = () => {
+    localStorage.setItem('cartArray', JSON.stringify(cartArray))
 }
 
 
@@ -61,6 +67,8 @@ const renderCart = () => {
     } else {
         cart.innerHTML = ""
     }
+
+    saveCart()
 }
 
 
@@ -150,3 +158,6 @@ openBook.addEventListener('click', (event) => {
 
 
 itemsMenu.innerHTML = `<h1 class="items-title">Items</h1>${renderedMenu}`
+if (cartArray.length > 0) {
+    renderCart()
+}
