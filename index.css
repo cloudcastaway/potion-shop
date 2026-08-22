@@ -41,14 +41,10 @@ p, button {
 }
 
 button {
-    letter-spacing: 0.05em
-}
-
-button,
-.add-button,
-.minus-button,
-.trash-button {
-    cursor: pointer;
+    letter-spacing: 0.05em;
+    color: #8B6FD9;
+    border: 1px solid #8B6FD9;
+    background: transparent;
 }
 
 .app-container {
@@ -130,9 +126,17 @@ button,
 
 #second-page {
     width: 500px;
+    height: 100%;
     position: absolute;
     top: 40px;
     left: 780px;
+}
+
+.message-container {
+    position: absolute;
+    top: 250px;
+    left: 100px;
+    margin: 0 auto;
 }
 
 .ingredients {
@@ -209,7 +213,7 @@ button,
 .payment-modal {
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: #F6E7DA;
     gap: 10px;
     padding: 1rem;
     box-shadow: 0 10px 40px rgba(46, 42, 58, 0.6);
@@ -228,7 +232,7 @@ button,
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     z-index: 20;
     background-color: rgba(46, 42, 58, 0.5);
 }
@@ -245,6 +249,8 @@ button,
     position: absolute;
     top: -10px;
     right: -10px;
+    background-color: #F6E7DA;
+    border-radius: 50%;
 }
 
 input {
@@ -253,6 +259,8 @@ input {
 }
 
 .confirmation-message {
+    background-color: #F6E7DA;
+    border: 1px solid #9B7FE0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -260,10 +268,8 @@ input {
     height: 100px;
     width: 200px;
     margin: 0 auto;
-    background-color: rgba(111, 184, 138, 0.7);
     padding: 25px 50px;
     border-radius: 20px;
-    border: solid 4px #E893C4;
 }
 
 .confirmation-message p {
@@ -281,6 +287,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .trash-button,
 button {
   transition: transform 0.2s, filter 0.2s;
+  cursor: pointer;
 }
 
 .add-button:hover,
@@ -344,6 +351,18 @@ button:hover {
     animation: moon-pulse 3s ease-in-out infinite;
     top: 50px;
     left: 70px;
+}
+
+.complete-order-btn,
+.pay-btn {
+    width: 200px;
+    height: 60px;
+    margin: 20px auto;
+}
+
+.price {
+    display: flex;
+    gap: 3px;
 }
 
 @keyframes fall {

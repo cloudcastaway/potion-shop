@@ -10,6 +10,7 @@ const customerName = document.getElementById('customer-name')
 const openBook = document.querySelector('.open-book')
 const bookCover = document.getElementById('book-cover')
 const bookPages = document.getElementById('book-pages')
+const messageContainer = document.querySelector('.message-container')
 let cartArray = []
 
 
@@ -54,7 +55,7 @@ const renderCart = () => {
         cart.innerHTML = `<h1 class="cart-title">Your order</h1>${renderedCart}`
         cart.innerHTML += `<div class="price-container">
                                 <h2>Total</h2>
-                                <p>${coinIcon}${totalPrice}</p>
+                                <p class="price">${coinIcon}${totalPrice}</p>
                             </div>
                             <button class="complete-order-btn">Complete order</button>`
     } else {
@@ -69,6 +70,8 @@ const removeFromCart = (id, array) => {
 
 
 itemsMenu.addEventListener('click', (event) => {
+    messageContainer.innerHTML = ``
+    
     if (event.target.classList.contains('add-button')) {
         const clickedId = Number(event.target.dataset.id)
         const potionClicked = menuArray.find((item) => item.id === clickedId)
@@ -109,7 +112,6 @@ cart.addEventListener('click', (event) => {
     if (event.target.classList.contains('complete-order-btn')) {
         modalOverlay.classList.add('visible')
         cart.querySelector('.complete-order-btn').disabled = true
-        document.querySelector('.app-container').style.overflow = 'hidden'
     }
 })
 
@@ -118,7 +120,6 @@ modalOverlay.addEventListener('click', (event) => {
     if (event.target == modalOverlay) {
         modalOverlay.classList.remove('visible')
         cart.querySelector('.complete-order-btn').disabled = false
-        document.querySelector('.app-container').style.overflow = 'scroll'
     }
 })
 
@@ -126,16 +127,17 @@ modalOverlay.addEventListener('click', (event) => {
 closeModalBtn.addEventListener('click', (event) => {
     modalOverlay.classList.remove('visible')
     cart.querySelector('.complete-order-btn').disabled = false
-    document.querySelector('.app-container').style.overflow = 'scroll'
 })
 
 paymentModal.addEventListener('submit', (event) => {
     event.preventDefault()
-    cart.innerHTML = `<section class="confirmation-message">
+    messageContainer.innerHTML = `<section class="confirmation-message">
                         <p>Thanks, <span class="name"></span>.</p>
                         <p>Your order is being bottled.</p>
                       </section>`
-    cart.querySelector('.name').textContent = customerName.value
+    cart.innerHTML = ``
+
+    messageContainer.querySelector('.name').textContent = customerName.value
     modalOverlay.classList.remove('visible')
     cartArray = []
     paymentModal.reset()
