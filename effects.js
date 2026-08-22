@@ -27,8 +27,16 @@ document.addEventListener('mousemove', (event) => {
 const renderSky = () => {
     for (let i = 0; i < 170; i++) {
         const skyElement = document.createElement('div')
-        const positionX = Math.random() * window.innerWidth
-        const positionY = Math.random() * window.innerHeight
+        const bookRect = document.getElementById('book-pages').getBoundingClientRect()
+        let positionX = Math.random() * window.innerWidth
+        let positionY = Math.random() * window.innerHeight
+        const margin = 20
+
+        while (positionX > bookRect.left + margin && positionX < bookRect.right - margin && 
+              positionY > bookRect.top + margin && positionY < bookRect.bottom - margin) {
+                positionX = Math.random() * window.innerWidth
+                positionY = Math.random() * window.innerHeight
+              }
 
         const indexSize = Math.floor(Math.random() * skyElementsSizes.length)
         const elementTypeIndex = Math.floor(Math.random() * skyElementsTypes.length)
