@@ -77,7 +77,6 @@ potion-shop/
 
 - Focus states for the card details inputs
 - Input validation for the card details form
-- Background music with a toggle
 - UI and spacing refinements
 
 ---
