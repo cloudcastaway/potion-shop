@@ -5,6 +5,11 @@ const skyElementsSizes = ["sky-element-smaller",
                           "sky-element-large"]
 const skyElementsTypes = ["circle", "star"]
 const durations = [3, 5, 7, 9, 11]
+let isPortraitAndSmall = window.matchMedia('(orientation: portrait) and (max-width: 1000px)').matches
+let isLandscape = window.matchMedia('(orientation: landscape)').matches
+let starsAndMoon = false
+let starCount = Math.round(window.innerWidth / 25)
+
 
 document.addEventListener('mousemove', (event) => {
     for (let i = 0; i < 2; i++) {
@@ -24,8 +29,8 @@ document.addEventListener('mousemove', (event) => {
 })
 
 
-const renderSky = () => {
-    for (let i = 0; i < 170; i++) {
+const renderSky = (elementsQt) => {
+    for (let i = 0; i < elementsQt; i++) {
         const skyElement = document.createElement('div')
         const bookRect = document.getElementById('book-cover').getBoundingClientRect()
         let positionX = Math.random() * window.innerWidth
@@ -67,5 +72,36 @@ const renderMoon = () => {
 }
 
 
-renderSky()
-renderMoon()
+const generateStarsAndMoon = (elementsQt) => {
+    renderSky(elementsQt)
+    renderMoon()
+    starsAndMoon = true
+}
+
+
+const removeSky = () => {
+    document.querySelectorAll(`.moon-image, .sky-element`).forEach((element) => {
+        element.remove()
+    })
+
+    starsAndMoon = false
+}
+
+
+window.matchMedia('(orientation: portrait) and (max-width: 1000px)').addEventListener('change', (event) => {
+    if (event.matches) {
+        removeSky()
+    } else {
+        starCount = Math.round(window.innerWidth / 25)
+        generateStarsAndMoon(starCount)
+    }
+})
+
+
+if (!isPortraitAndSmall) {
+    generateStarsAndMoon(starCount)
+}
+
+if (isLandscape) {
+    generateStarsAndMoon(starCount)
+}

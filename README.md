@@ -1,20 +1,19 @@
 # Potion Shop
 
-A web-based potion shop menu app laid out as an open spellbook, built as part of the Scrimba Full Stack Path, focusing on DOM manipulation, dynamic content rendering, and CSS layout and styling.
+An interactive potion shop rendered as an open spellbook, with a responsive layout, dynamic cart, and checkout flow.
 
 ---
 
 ## Project Overview
 
-A [Figma design](https://www.figma.com/design/Hdgwo69Dym9vVsxbuPbl0h/Mobile-Restaurant-Menu?node-id=0-1&t=r8jwmyHIEVtTc5cL-1) was provided as a layout reference. All HTML, CSS, and JavaScript were written independently from scratch, adapting the original restaurant menu concept into a potion shop, focusing on connecting a JavaScript data array to the DOM and keeping structure, style, and logic cleanly separated.
+Potion Shop began as a straightforward mobile menu app, built as part of the Scrimba Full Stack Path and based on a [restaurant menu Figma design](https://www.figma.com/design/Hdgwo69Dym9vVsxbuPbl0h/Mobile-Restaurant-Menu?node-id=0-1&t=r8jwmyHIEVtTc5cL-1) used as a starting reference. All HTML, CSS, and JavaScript were written independently from scratch, connecting a JavaScript data array to the DOM and keeping structure, style, and logic cleanly separated.
 
-The mobile layout was implemented first and worked as specified. It was then deliberately redesigned as an open spellbook spread: a decision made to suit the theme, and one that removed the need for scrolling by placing the menu and the order on facing pages. A closed book cover now serves as the landing screen, opening to reveal the spread on click. A single-page version for narrow screens is planned.
+The layout was later redesigned as an open spellbook spread: a decision made to suit the theme, and one that removed the need for scrolling by placing the menu and the cart on facing pages. A closed book cover now serves as the landing screen, opening to reveal the spread on click. The layout scales responsively with viewport width, with a landscape-only prompt shown on narrow portrait screens where the spread wouldn't fit comfortably.
 
 ---
 
 ## Features
 
-- Two-page spellbook layout with the menu and the order on facing pages
 - Menu items (potions) rendered dynamically from a JavaScript data array
 - Each item displays icon, name, ingredients, and price
 - Add-to-cart functionality via a "+" button on each item
@@ -23,9 +22,8 @@ The mobile layout was implemented first and worked as specified. It was then del
 - Cart displays running total price
 - Checkout modal with card details form, opened via a "Complete order" button and dismissed by clicking outside or the close button
 - Order confirmation message displayed after payment, personalised with the customer's name
-- Sparkle effect trailing the cursor across the page and custom cursor icons for default and interactive states
-- Animated night sky background with a starfield and glowing moon
-- Closed book cover as the landing screen, opening to the spread on click
+- Rotate-device prompt for narrow portrait screens, replacing the book layout with a landscape-only message
+- Responsive book layout scaling with viewport width (vw/aspect-ratio) instead of fixed pixel dimensions
 
 ---
 
@@ -45,7 +43,8 @@ potion-shop/
 │   │   ├── bottle-health.png
 │   │   ├── bottle-mana.png
 │   │   ├── bottle-stamina.png
-│   │   └── coin-icon.png
+│   │   ├── coin-icon.png
+│   │   └── phone-icon.png
 │   ├── banner.png
 │   ├── book-bg.png
 │   ├── book-cover.png
@@ -67,13 +66,15 @@ potion-shop/
 - CSS3
   - Flexbox
   - Animations and keyframes
+  - Responsive design (media queries, viewport units)
 - JavaScript (vanilla)
+  - DOM manipulation & event delegation
+  - LocalStorage persistence
 
 ---
 
 ## Planned Improvements
 
-- Single-page book layout for narrow screens
 - Focus states for the card details inputs
 - Input validation for the card details form
 - Background music with a toggle
@@ -85,4 +86,4 @@ potion-shop/
 
 Potion icons created by [Magnific - Flaticon](https://www.flaticon.com/free-icons/potion "potion icons").
 
-Banner, moon, book, and favicon artwork generated with ChatGPT. Button and coin icons generated with Claude.
+Banner, moon, book, and favicon artwork generated with ChatGPT. Button, phone, and coin icons generated with Claude.

@@ -3,13 +3,16 @@ body {
     display: flex;
     justify-content: center;
     background: radial-gradient(#2E3A99 0%, #14183D 70%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
     cursor: url('./assets/cursors/cursor-arrow.png') 4 2, auto;
 }
 
 .sr-only {
     position: absolute;
-    width: 1px;
-    height: 1px;
+    width: 0.1vw;
+    height: 0.1vh;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
 }
@@ -25,20 +28,23 @@ h1, p {
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 2.5vw;
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 1.5vw;
     padding-bottom: 0;
     margin-bottom: 0;
 }
 
 p, button {
     font-family: 'Lora', serif;
-    font-size: 14px;
-    color: #6785A8;
+    font-size: 0.65vw;
     letter-spacing: 0.02em;
+}
+
+p {
+    color: #6785A8;
 }
 
 button {
@@ -49,7 +55,7 @@ button {
 }
 
 .app-container {
-    padding-top: 80px;
+    padding-top: 7vh;
     width: 100%;
     height: 100%;
     flex-direction: column;
@@ -70,8 +76,9 @@ button {
 #book-cover.visible {
     display: flex;
     background-image: url('./assets/book-cover.png');
-    width: 834px;
-    height: 1019px;
+    width: 35vw;
+    height: auto;
+    aspect-ratio: 834/1019;
     background-size: contain;
     background-repeat: no-repeat;
     position: relative;
@@ -92,10 +99,10 @@ button {
 }
 
 .banner {
-    top: 130px;
-    left: 200px;
+    top: 15%;
+    left: 24%;
     position: absolute;
-    width: 500px;
+    width: 60%;
     height: auto;
     mask-image: radial-gradient(ellipse, black 30%, transparent 100%);
     -webkit-mask-image: radial-gradient(ellipse, black 30%, transparent 100%);
@@ -112,45 +119,46 @@ button {
     background-repeat: no-repeat;
     background-size: contain;
     position: relative;
-    width: 1413px;
-    height: 980px;
+    width: 59vw;
+    height: auto;
+    aspect-ratio: 1413/980;
 }
 
 #first-page {
-    width: 500px;
+    width: 38%;
     position: absolute;
-    top: 40px;
-    left: 180px;
+    top: 0.5%;
+    left: 10%;
 }
 
 #second-page {
-    width: 500px;
+    width: 36%;
     height: 70%;
     position: absolute;
-    top: 40px;
-    left: 780px;
+    top: 0.5%;
+    left: 53%;
 }
 
 .message-container {
     position: absolute;
-    top: 250px;
-    left: 100px;
+    top: 40%;
+    left: 16%;
     margin: 0 auto;
 }
 
 .ingredients {
-    margin-top: 8px;
-    margin-bottom: 10px;
+    margin-top: 1.06vh;
+    margin-bottom: 1vh;
 }
 
 .menu-item,
 .cartItem {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    border-bottom: 1px solid #e0e0e0;
-    padding: 1rem 0;
+    gap: 1.5vh;
+    padding: 1.5vh 0;
     border-bottom: 1px solid #C9A876;
+    font-size: 2vw;
 }
 
 .item-info {
@@ -161,17 +169,30 @@ button {
 }
 
 .potion-icon,
-.add-button, 
-.item-quantity {
-  width: 60px; 
-  height: 60px;
+.add-button {
   flex-shrink: 0;
+}
+
+.potion-icon {
+    width: 3vw;
+    height: auto;
+}
+
+.add-button {
+    width: 2.5vw;
+    height: auto;
+}
+
+.minus-button,
+.trash-button {
+    width: 1vw;
+    height: auto;
 }
 
 #items-menu,
 #cart {
-    margin: 1rem;
-    padding-top: 2rem;
+    margin: 2vh;
+    padding-top: 4vh;
     display: flex;
     flex-direction: column;
     z-index: 10;
@@ -185,12 +206,7 @@ button {
 .quantity-container {
     display: flex;
     flex-direction: row;
-    gap: 10px;
-}
-
-.quantity-container img {
-    width: 24px;
-    height: 24px;
+    gap: 0.3vw;
 }
 
 .price-container {
@@ -204,8 +220,8 @@ button {
 }
 
 .coin-icon {
-    width: 16px;
-    height: 16px;
+    width: 0.7vw;
+    height: auto;
     vertical-align: middle;
 }
 
@@ -213,9 +229,9 @@ button {
     display: flex;
     flex-direction: column;
     background-color: #F6E7DA;
-    gap: 10px;
-    padding: 1rem;
-    box-shadow: 0 10px 40px rgba(46, 42, 58, 0.6);
+    gap: 1.1vh;
+    padding: 1.8vh;
+    box-shadow: 0 1vh 4.5vw rgba(46, 42, 58, 0.6);
     position: relative;
 }
 
@@ -237,24 +253,24 @@ button {
 }
 
 .form-title {
-    margin-bottom: 1rem;
+    margin-bottom: 1.8vh;
 }
 
 .pay-btn {
-    margin-top: 1rem;
+    margin-top: 1.8vh;
 }
 
 .close-modal-btn {
     position: absolute;
-    top: -10px;
-    right: -10px;
+    top: -3%;
+    right: -3%;
     background-color: #F6E7DA;
     border-radius: 50%;
 }
 
 input {
     display: block;
-    height: 3rem;
+    height: 5vh;
 }
 
 .confirmation-message {
@@ -264,11 +280,11 @@ input {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100px;
-    width: 200px;
+    width: 9vw;
+    height: 11vh;
     margin: 0 auto;
-    padding: 25px 50px;
-    border-radius: 20px;
+    padding: 2.5vh 2.7vw;
+    border-radius: 30%;
 }
 
 .confirmation-message p {
@@ -345,29 +361,38 @@ button:hover {
 
 .moon-image {
     position: fixed;
-    width: 200px;
+    width: 10vw;
     height: auto;
     filter: drop-shadow(0 0 12px #c8b6ff);
     animation: moon-pulse 3s ease-in-out infinite;
-    top: 50px;
-    left: 70px;
+    top: 5%;
+    left: 3%;
 }
 
 .complete-order-btn,
 .pay-btn {
-    width: 200px;
-    height: 60px;
-    margin: 20px auto;
+    width: 10vw;
+    height: 6vh;
+    margin: 2vh auto;
 }
 
 .price {
     display: flex;
-    gap: 3px;
+    gap: 0.2vw;
+}
+
+.orientation-prompt,
+.prompt-container {
+    display: none;
+}
+
+.phone-icon {
+    display: none;
 }
 
 @keyframes fall {
     to {
-        transform: translateY(100px);
+        transform: translateY(10vh);
         opacity: 0;
     }
 }
@@ -398,5 +423,46 @@ button:hover {
         filter: drop-shadow(0 0 20px #c8b6ff)
                 drop-shadow(0 0 35px #fff4c2);
         transform: scale(1.03);
+    }
+}
+
+@keyframes rotate-hint {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(90deg);
+    }
+}
+
+@media (orientation: portrait) and (max-width: 1000px) {
+    .orientation-prompt {
+        display: block;
+        color: #FFF8E7;
+        font-size: 8vw;
+        text-align: center;
+        width: 50vw;
+        margin: 0 auto;
+    }
+
+    .phone-icon {
+        animation: rotate-hint 6s ease-in-out infinite;
+        width: 10vw;
+        height: auto;
+        display: block;
+    }   
+
+    .prompt-container {
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        top: 35%;
+        align-items: center;
+        justify-content: center;
+        gap: 1vh;
+    }
+
+    .app-container {
+        display: none;
     }
 }
