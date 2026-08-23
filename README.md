@@ -23,7 +23,7 @@ The mobile layout was implemented first and worked as specified. It was then del
 - Cart displays running total price
 - Checkout modal with card details form, opened via a "Complete order" button and dismissed by clicking outside or the close button
 - Order confirmation message displayed after payment, personalised with the customer's name
-- Sparkle effect trailing the cursor across the page
+- Sparkle effect trailing the cursor across the page and custom cursor icons for default and interactive states
 - Animated night sky background with a starfield and glowing moon
 - Closed book cover as the landing screen, opening to the spread on click
 
@@ -34,15 +34,18 @@ The mobile layout was implemented first and worked as specified. It was then del
 ```
 potion-shop/
 ├── assets/
+│   ├── buttons/
+│   │   ├── add-button.png
+│   │   ├── minus-button.png
+│   │   └── trash-button.png
+│   ├── cursors/
+│   │   ├── cursor-arrow.png
+│   │   └── cursor-pointer.png
 │   ├── icons/
 │   │   ├── bottle-health.png
 │   │   ├── bottle-mana.png
 │   │   ├── bottle-stamina.png
 │   │   └── coin-icon.png
-│   ├── buttons/
-│   │   ├── add-button.png
-│   │   ├── minus-button.png
-│   │   └── trash-button.png
 │   ├── banner.png
 │   ├── book-bg.png
 │   ├── book-cover.png
@@ -73,7 +76,6 @@ potion-shop/
 - Single-page book layout for narrow screens
 - Focus states for the card details inputs
 - Input validation for the card details form
-- Persist cart across page reloads
 - Background music with a toggle
 - UI and spacing refinements
 
