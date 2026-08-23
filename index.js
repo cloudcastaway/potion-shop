@@ -12,7 +12,7 @@ const bookCover = document.getElementById('book-cover')
 const bookPages = document.getElementById('book-pages')
 const messageContainer = document.querySelector('.message-container')
 const savedCart = localStorage.getItem('cartArray')
-let cartArray = savedCart ? JSON.parse(savedCart) : {}
+let cartArray = savedCart ? JSON.parse(savedCart) : []
 
 
 const renderedMenu = menuArray.map(({name, ingredients, price, icon, id}) => {
