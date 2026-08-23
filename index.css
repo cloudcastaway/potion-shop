@@ -3,9 +3,7 @@ body {
     display: flex;
     justify-content: center;
     background: radial-gradient(#2E3A99 0%, #14183D 70%);
-    background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
     cursor: url('./assets/cursors/cursor-arrow.png') 4 2, auto;
 }
 
@@ -119,7 +117,7 @@ button {
     background-repeat: no-repeat;
     background-size: contain;
     position: relative;
-    width: 59vw;
+    width: 60vw;
     height: auto;
     aspect-ratio: 1413/980;
 }
@@ -436,6 +434,10 @@ button:hover {
 }
 
 @media (orientation: portrait) and (max-width: 1000px) {
+    body {
+        height: 100vh;
+    }
+
     .orientation-prompt {
         display: block;
         color: #FFF8E7;
