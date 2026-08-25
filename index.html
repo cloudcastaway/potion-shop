@@ -34,10 +34,10 @@
                             <form class="payment-modal">
                                 <button class="close-modal-btn" type="button">x</button>
                                 <h1 class="form-title">Enter card details</h1>
-                                <input id="customer-name" type="text" placeholder="Your name" required>
-                                <input type="number" placeholder="Card number" required>
-                                <input type="number" placeholder="CVV" required>
-                                <button class="pay-btn">Pay</button>
+                                <input id="input-name" pattern="[A-Za-zÀ-ÿ\s'\-]+" type="text" placeholder="Your name" required>
+                                <input id="input-card-number" autocomplete="off" pattern="[0-9]{16}" type="text" placeholder="Card number" required>
+                                <input id="input-cvv" autocomplete="off" pattern="[0-9]{3}" type="text" placeholder="CVV" required>
+                                <button type="submit" class="pay-btn">Pay</button>
                             </form>
                         </div>
                         <div class="message-container"></div>

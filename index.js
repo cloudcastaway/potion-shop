@@ -6,7 +6,9 @@ const modalOverlay = document.querySelector('.modal-overlay')
 const coinIcon = '<img src="./assets/icons/coin-icon.png" class="coin-icon">'
 const closeModalBtn = document.querySelector('.close-modal-btn')
 const paymentModal = document.querySelector('.payment-modal')
-const customerName = document.getElementById('customer-name')
+const inputName = document.getElementById('input-name')
+const inputCardNumber = document.getElementById('input-card-number')
+const inputCVV = document.getElementById('input-cvv')
 const openBook = document.querySelector('.open-book')
 const bookCover = document.getElementById('book-cover')
 const bookPages = document.getElementById('book-pages')
@@ -74,6 +76,13 @@ const renderCart = () => {
 
 const removeFromCart = (id, array) => {
     return array.filter((item) => item.id !== id)
+}
+
+
+const getFirstName = (name) => {
+    const nameArray = name.split(/[\s-]/)
+    name = nameArray[0]
+    return name = name.charAt(0).toUpperCase() + name.slice(1)
 }
 
 
@@ -145,7 +154,8 @@ paymentModal.addEventListener('submit', (event) => {
                       </section>`
     cart.innerHTML = ``
 
-    messageContainer.querySelector('.name').textContent = customerName.value
+    const firstName = getFirstName(inputName.value)
+    messageContainer.querySelector('.name').textContent = firstName
     modalOverlay.classList.remove('visible')
     cartArray = []
     paymentModal.reset()
@@ -154,6 +164,36 @@ paymentModal.addEventListener('submit', (event) => {
 openBook.addEventListener('click', (event) => {
     bookCover.classList.remove('visible')
     bookPages.classList.add('visible')
+})
+
+
+inputName.addEventListener('invalid', () => {
+    inputName.setCustomValidity('Please use only letters, spaces, hyphens or apostrophes.')
+})
+
+
+inputName.addEventListener('input', () => {
+    inputName.setCustomValidity('')
+})
+
+
+inputCardNumber.addEventListener('invalid', () => {
+    inputCardNumber.setCustomValidity('Please enter a valid card number (16 digits).')
+})
+
+
+inputCardNumber.addEventListener('input', () => {
+    inputCardNumber.setCustomValidity('')
+})
+
+
+inputCVV.addEventListener('invalid', () => {
+    inputCVV.setCustomValidity('Please enter a valid CVV (3 digits).')
+})
+
+
+inputCVV.addEventListener('input', () => {
+    inputCVV.setCustomValidity('')
 })
 
 

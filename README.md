@@ -24,6 +24,7 @@ The layout was later redesigned as an open spellbook spread: a decision made to 
 - Order confirmation message displayed after payment, personalised with the customer's name
 - Rotate-device prompt for narrow portrait screens, replacing the book layout with a landscape-only message
 - Responsive book layout scaling with viewport width (vw/aspect-ratio) instead of fixed pixel dimensions
+- Input validation for name, card number, and CVV with custom error messages
 
 ---
 
@@ -76,7 +77,6 @@ potion-shop/
 ## Planned Improvements
 
 - Focus states for the card details inputs
-- Input validation for the card details form
 - UI and spacing refinements
 
 ---
