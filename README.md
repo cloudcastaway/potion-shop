@@ -20,6 +20,7 @@ The layout was later redesigned as an open spellbook spread: a decision made to 
 - Cart tracks selected items and quantity, rendered dynamically on the right-hand page
 - Decrease quantity or remove items from the cart via minus and trash buttons
 - Cart displays running total price
+- Cart persists across page reloads using localStorage
 - Checkout modal with card details form, opened via a "Complete order" button and dismissed by clicking outside or the close button
 - Order confirmation message displayed after payment, personalised with the customer's name
 - Rotate-device prompt for narrow portrait screens, replacing the book layout with a landscape-only message
