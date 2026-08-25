@@ -25,6 +25,7 @@ The layout was later redesigned as an open spellbook spread: a decision made to 
 - Rotate-device prompt for narrow portrait screens, replacing the book layout with a landscape-only message
 - Responsive book layout scaling with viewport width (vw/aspect-ratio) instead of fixed pixel dimensions
 - Input validation for name, card number, and CVV with custom error messages
+- Custom focus states on the card details inputs, matching the app's palette
 
 ---
 
@@ -71,13 +72,6 @@ potion-shop/
 - JavaScript (vanilla)
   - DOM manipulation & event delegation
   - LocalStorage persistence
-
----
-
-## Planned Improvements
-
-- Focus states for the card details inputs
-- UI and spacing refinements
 
 ---
 

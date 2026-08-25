@@ -268,7 +268,7 @@ button {
 
 input {
     display: block;
-    height: 5vh;
+    height: 4vh;
 }
 
 .confirmation-message {
@@ -386,6 +386,12 @@ button:hover {
 
 .phone-icon {
     display: none;
+}
+
+input:focus {
+    border-color: #8B6FD9;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(139, 111, 217, 0.3);
 }
 
 @keyframes fall {
